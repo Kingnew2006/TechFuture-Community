@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Билеты - TechFuture 2026</title>
+    <link rel="stylesheet" href="css/tickets.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__wrapper">
+                <div class="navbar__logo">
+                    <a href="index.html">TechFuture 2026</a>
+                </div>
+                <button class="navbar__toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="navbar__menu" id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="speakers.html">Спикеры</a></li>
+                    <li><a href="schedule.html">Расписание</a></li>
+                    <li><a href="tickets.html" class="active">Билеты</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="page__header">
+        <div class="container">
+            <h1>Билеты на конференцию</h1>
+            <p>Выберите подходящий вариант и зарегистрируйтесь</p>
+        </div>
+    </header>
+
+    <!-- Тарифы -->
+    <section class="tickets">
+        <div class="container">
+            <div class="tickets__grid">
+                <!-- Тариф 1: Студент -->
+                <div class="ticket__card">
+                    <div class="ticket__badge">ПОПУЛЯРНО</div>
+                    <h3 class="ticket__title">Студенческий</h3>
+                    <div class="ticket__price">
+                        <span class="price__amount">1500</span>
+                        <span class="price__currency">₽</span>
+                    </div>
+                    <p class="ticket__description">Для студентов вузов</p>
+                    <ul class="ticket__features">
+                        <li>✓ Доступ на оба дня конференции</li>
+                        <li>✓ Обед и напитки</li>
+                        <li>✓ Материалы конференции</li>
+                        <li>✓ Сертификат участника</li>
+                        <li>✗ Нетворкинг события</li>
+                    </ul>
+                    <button class="btn btn--primary" onclick="buyTicket('Студенческий', 1500)">
+                        Купить билет
+                    </button>
+                </div>
+
+                <!-- Тариф 2: Стандарт -->
+                <div class="ticket__card featured">
+                    <div class="ticket__badge featured">РЕКОМЕНДУЕМ</div>
+                    <h3 class="ticket__title">Стандартный</h3>
+                    <div class="ticket__price">
+                        <span class="price__amount">2500</span>
+                        <span class="price__currency">₽</span>
+                    </div>
+                    <p class="ticket__description">Для всех желающих</p>
+                    <ul class="ticket__features">
+                        <li>✓ Доступ на оба дня конференции</li>
+                        <li>✓ Премиум обед и напитки</li>
+                        <li>✓ Материалы конференции</li>
+                        <li>✓ Сертификат участника</li>
+                        <li>✓ Нетворкинг события</li>
+                        <li>✓ Доступ к приватной группе</li>
+                    </ul>
+                    <button class="btn btn--primary" onclick="buyTicket('Стандартный', 2500)">
+                        Купить билет
+                    </button>
+                </div>
+<!-- Тариф 3: VIP -->
+                <div class="ticket__card">
+                    <div class="ticket__badge">ПРЕМИУМ</div>
+                    <h3 class="ticket__title">VIP</h3>
+                    <div class="ticket__price">
+                        <span class="price__amount">4500</span>
+                        <span class="price__currency">₽</span>
+                    </div>
+                    <p class="ticket__description">Для профессионалов и спикеров</p>
+                    <ul class="ticket__features">
+                        <li>✓ Всё включено в Стандартный</li>
+                        <li>✓ VIP брифинг со спикерами</li>
+                        <li>✓ Приватный ужин на день 1</li>
+                        <li>✓ Заезд в отель (2 ночи)</li>
+                        <li>✓ Персональный консьерж</li>
+                        <li>✓ Фото и видеоотчет</li>
+                    </ul>
+                    <button class="btn btn--primary" onclick="buyTicket('VIP', 4500)">
+                        Купить билет
+                    </button>
+                </div>
+            </div>
+
+            <!-- Информация по скидкам -->
+            <div class="promo__section">
+                <h2>Специальные предложения</h2>
+                <div class="promo__list">
+                    <div class="promo__item">
+                        <h4>Групповая скидка</h4>
+                        <p>От 5 билетов — скидка 10%, от 10 — скидка 15%</p>
+                    </div>
+                    <div class="promo__item">
+                        <h4>Ранний доступ</h4>
+                        <p>При покупке до 28 февраля — дополнительная скидка 5%</p>
+                    </div>
+                    <div class="promo__item">
+                        <h4>Партнеры конференции</h4>
+                        <p>Сотрудники компаний-партнеров получают 20% скидку</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно для покупки -->
+    <div id="buyModal" class="modal" style="display: none;">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Оформление билета</h3>
+                <button class="modal__close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal__body">
+                <p>Тариф: <strong id="modalTicketType"></strong></p>
+                <p>Цена: <strong id="modalPrice"></strong> ₽</p>
+                
+                <form id="buyForm">
+                    <div class="form__group">
+                        <label for="buyName">Ваше имя:</label>
+                        <input type="text" id="buyName" required placeholder="Иван Петров">
+                    </div>
+                    <div class="form__group">
+                        <label for="buyEmail">Email:</label>
+                        <input type="email" id="buyEmail" required placeholder="ivan@example.com">
+                    </div>
+                    <div class="form__group">
+                        <label for="buyPhone">Телефон:</label>
+                        <input type="tel" id="buyPhone" required placeholder="+7 (999) 123-45-67">
+                    </div>
+                </form>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn--secondary" onclick="closeModal()">Отмена</button>
+                <button class="btn btn--primary" onclick="submitBuy()">Оформить покупку</button>
+            </div>
+        </div>
+    </div>
+<!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>TechFuture 2026</h4>
+                    <p>Образовательная конференция для IT-специалистов</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="speakers.html">Спикеры</a></li>
+                        <li><a href="schedule.html">Расписание</a></li>
+                        <li><a href="tickets.html">Билеты</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Контакты</h4>
+                    <p>Email: info@techfuture2026.com</p>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 TechFuture. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
