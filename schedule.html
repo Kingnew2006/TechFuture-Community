@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание - TechFuture 2026</title>
+    <link rel="stylesheet" href="css/schedule.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__wrapper">
+                <div class="navbar__logo">
+                    <a href="index.html">TechFuture 2026</a>
+                </div>
+                <button class="navbar__toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="navbar__menu" id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="speakers.html">Спикеры</a></li>
+                    <li><a href="schedule.html" class="active">Расписание</a></li>
+                    <li><a href="tickets.html">Билеты</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="page__header">
+        <div class="container">
+            <h1>Расписание конференции</h1>
+            <p>15-16 марта 2026</p>
+        </div>
+    </header>
+
+    <!-- Фильтр дней -->
+    <div class="schedule__filter">
+        <div class="container">
+            <div class="filter__buttons">
+                <button class="filter__btn active" data-day="1">День 1: 15 марта</button>
+                <button class="filter__btn" data-day="2">День 2: 16 марта</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Расписание -->
+    <section class="schedule">
+        <div class="container">
+            <!-- День 1 -->
+            <div class="schedule__day active" id="day-1">
+                <h2 class="schedule__day-title">День 1: 15 марта 2026</h2>
+                <div class="schedule__timeline">
+                    <!-- Событие 1 -->
+                    <div class="schedule__event">
+                        <div class="event__time">09:00 - 10:00</div>
+                        <div class="event__content">
+                            <h3>Регистрация и кофе-брейк</h3>
+                            <p class="event__speaker">Холл конференции</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 2 -->
+                    <div class="schedule__event">
+                        <div class="event__time">10:00 - 10:45</div>
+                        <div class="event__content">
+                            <h3>Открытие конференции</h3>
+                            <p class="event__speaker">Организаторы конференции</p>
+                            <p class="event__description">Приветственное слово и обзор программы</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 3 -->
+                    <div class="schedule__event featured">
+                        <div class="event__time">11:00 - 12:00</div>
+                        <div class="event__content">
+                            <h3>Современный Frontend: React в 2026</h3>
+                            <p class="event__speaker">Александр Петров, Yandex</p>
+                            <p class="event__description">Обзор последних трендов в фронтенд-разработке</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 4 -->
+                    <div class="schedule__event featured">
+                        <div class="event__time">12:15 - 13:15</div>
+                        <div class="event__content">
+                            <h3>Введение в Machine Learning</h3>
+                            <p class="event__speaker">Мария Соколова, Sber</p>
+                            <p class="event__description">Первые шаги в машинном обучении для веб-разработчиков</p>
+                        </div>
+                    </div>
+                    <!-- Событие 5 -->
+                    <div class="schedule__event">
+                        <div class="event__time">13:15 - 14:30</div>
+                        <div class="event__content">
+                            <h3>Обеденный перерыв</h3>
+                            <p class="event__speaker">Кафе конференции</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 6 -->
+                    <div class="schedule__event featured">
+                        <div class="event__time">14:30 - 15:30</div>
+                        <div class="event__content">
+                            <h3>От идеи к стартапу: реальные кейсы</h3>
+                            <p class="event__speaker">Дмитрий Белов, StartupHub</p>
+                            <p class="event__description">Как создать успешный IT-стартап с нуля</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 7 -->
+                    <div class="schedule__event">
+                        <div class="event__time">15:45 - 16:45</div>
+                        <div class="event__content">
+                            <h3>Панельная дискуссия: Карьера в IT</h3>
+                            <p class="event__speaker">Модератор: Иван Коваленко, VK</p>
+                            <p class="event__description">Обсуждение путей развития карьеры в IT</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 8 -->
+                    <div class="schedule__event">
+                        <div class="event__time">17:00 - 18:30</div>
+                        <div class="event__content">
+                            <h3>Нетворкинг-коктейль</h3>
+                            <p class="event__speaker">Холл конференции</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- День 2 -->
+            <div class="schedule__day" id="day-2">
+                <h2 class="schedule__day-title">День 2: 16 марта 2026</h2>
+                <div class="schedule__timeline">
+                    <!-- Событие 1 -->
+                    <div class="schedule__event">
+                        <div class="event__time">09:00 - 09:30</div>
+                        <div class="event__content">
+                            <h3>Кофе и регистрация</h3>
+                            <p class="event__speaker">Холл конференции</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 2 -->
+                    <div class="schedule__event featured">
+                        <div class="event__time">09:30 - 10:30</div>
+                        <div class="event__content">
+                            <h3>DevOps для начинающих</h3>
+                            <p class="event__speaker">Анна Волкова, Tinkoff</p>
+                            <p class="event__description">Docker, контейнеризация и основы CI/CD</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 3 -->
+                    <div class="schedule__event featured">
+                        <div class="event__time">10:45 - 11:45</div>
+                        <div class="event__content">
+                            <h3>Backend-архитектура для масштабируемых приложений</h3>
+                            <p class="event__speaker">Елена Морозова, Mail.ru</p>
+                            <p class="event__description">Проектирование высоконагруженных систем</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 4 -->
+                    <div class="schedule__event">
+                        <div class="event__time">12:00 - 13:00</div>
+                        <div class="event__content">
+                            <h3>Мастер-класс: Прохождение интервью</h3>
+                            <p class="event__speaker">Иван Коваленко, VK</p>
+                        </div>
+                    </div>
+                    <!-- Событие 5 -->
+                    <div class="schedule__event">
+                        <div class="event__time">13:00 - 14:00</div>
+                        <div class="event__content">
+                            <h3>Обеденный перерыв</h3>
+                            <p class="event__speaker">Кафе конференции</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 6 -->
+                    <div class="schedule__event">
+                        <div class="event__time">14:00 - 15:00</div>
+                        <div class="event__content">
+                            <h3>Воркшоп: Build a web app in 1 hour</h3>
+                            <p class="event__speaker">Александр Петров, Yandex</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 7 -->
+                    <div class="schedule__event">
+                        <div class="event__time">15:15 - 16:15</div>
+                        <div class="event__content">
+                            <h3>Тренды AI: Что ожидать в 2026?</h3>
+                            <p class="event__speaker">Мария Соколова, Sber</p>
+                        </div>
+                    </div>
+
+                    <!-- Событие 8 -->
+                    <div class="schedule__event">
+                        <div class="event__time">16:30 - 17:30</div>
+                        <div class="event__content">
+                            <h3>Церемония закрытия и вручение сертификатов</h3>
+                            <p class="event__speaker">Организаторы</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>TechFuture 2026</h4>
+                    <p>Образовательная конференция для IT-специалистов</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="speakers.html">Спикеры</a></li>
+                        <li><a href="schedule.html">Расписание</a></li>
+                        <li><a href="tickets.html">Билеты</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Контакты</h4>
+                    <p>Email: info@techfuture2026.com</p>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 TechFuture. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>
