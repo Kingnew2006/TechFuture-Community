@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - TechFuture 2026</title>
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/root.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__wrapper">
+                <div class="navbar__logo">
+                    <a href="index.html">TechFuture 2026</a>
+                </div>
+                <button class="navbar__toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="navbar__menu" id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="speakers.html">Спикеры</a></li>
+                    <li><a href="schedule.html">Расписание</a></li>
+                    <li><a href="tickets.html">Билеты</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="page__header">
+        <div class="container">
+            <h1>Часто задаваемые вопросы</h1>
+            <p>Ответы на популярные вопросы о конференции</p>
+        </div>
+    </header>
+
+    <!-- FAQ Аккордеон -->
+    <section class="faq">
+        <div class="container">
+            <div class="faq__accordion" id="faqAccordion">
+                
+                <!-- Вопрос 1 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Когда проходит конференция?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Конференция TechFuture 2026 проходит 15-16 марта 2026 года. 
+                            Это два дня интенсивной программы с докладами, мастер-классами и нетворкингом.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 2 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Где проходит мероприятие?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Конференция проходит в МЦК "Экспоцентр" 
+                            (Краснопресненская наб., 14, Москва). Адрес будет отправлен вам в подтверждении регистрации.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 3 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Кто может участвовать?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Конференция открыта для всех: студентов, начинающих разработчиков, опытных IT-специалистов 
+                            и менеджеров. Не нужного никакого специального опыта — мероприятие подходит для всех уровней.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 4 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Какой тариф выбрать?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <ul class="answer__list">
+                            <li><strong>Студенческий</strong> — для студентов вузов (требуется справка)</li>
+                            <li><strong>Стандартный</strong> — оптимальный вариант для всех желающих</li>
+                            <li><strong>VIP</strong> — премиум опыт с дополнительными событиями</li>
+                        </ul>
+                        <p>Большинство выбирают Стандартный тариф как оптимальное соотношение цены и качества.</p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 5 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Есть ли групповые скидки?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Да! Мы предлагаем групповые скидки:
+                        </p>
+                        <ul class="answer__list">
+                            <li>От 5 билетов — скидка 10%</li>
+                            <li>От 10 билетов — скидка 15%</li>
+                            <li>Сотрудники партнеров — скидка 20%</li>
+                        </ul>
+                        <p>Свяжитесь с нами для оформления группового заказа.</p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 6 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Что входит в билет?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>В зависимости от тарифа в билет входит:</p>
+                        <ul class="answer__list">
+                            <li>Доступ на 1 или 2 дня конференции</li>
+                            <li>Обед и напитки</li>
+                            <li>Материалы конференции</li>
+                            <li>Сертификат участника</li>
+                            <li>Доступ к нетворкинг-событиям (в зависимости от тарифа)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Вопрос 7 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Можно ли вернуть билет?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Да, возврат билета возможен до 1 марта 2026 года с вычетом 10% комиссии. 
+                            После этой даты возврат невозможен. Свяжитесь с нашей службой поддержки для оформления возврата.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 8 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Требуется ли подготовка?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Нет, подготовка не требуется. Конференция разработана для людей всех уровней. 
+                            Вы сможете следить за докладами на интересующие вас темы и развивать свои знания.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 9 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Как получить сертификат?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Сертификат выдается всем участникам конференции при условии посещения 
+                            не менее 80% сессий. Сертификат будет отправлен вам по email в течение 2 недель после конференции.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 10 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Как стать спикером?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Если вы хотите поделиться своим опытом со студентами и начинающими специалистами, 
+                            отправьте предложение на email: speakers@techfuture2026.com
+                        </p>
+                        <p>
+                            Укажите название доклада, краткое описание (200-300 слов) и вашу контактную информацию. 
+                            Сроки приема предложений: до 15 февраля 2026 года.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 11 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Как зарегистрироваться?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Регистрация простая: перейдите на страницу "Билеты", выберите подходящий тариф, 
+                            нажмите "Купить билет", заполните форму и следуйте инструкциям платежа.
+                        </p>
+                        <p>
+                            После оплаты вы получите письмо с подтверждением и деталями входа на все платформы конференции.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 12 -->
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(this)">
+                        <h3>Какие способы оплаты вы принимаете?</h3>
+                        <span class="faq__icon">+</span>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Мы принимаем различные способы оплаты:
+                        </p>
+                        <ul class="answer__list">
+                            <li>Банковские карты (Visa, Mastercard, МИР)</li>
+                            <li>Яндекс.Касса</li>
+                            <li>PayPal</li>
+                            <li>Банковский перевод для физических лиц</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты для дополнительных вопросов -->
+    <section class="contacts-cta">
+        <div class="container">
+            <h2>Не нашли ответ?</h2>
+            <p>Свяжитесь с нами напрямую</p>
+            <a href="contacts.html" class="btn btn--primary">Перейти в контакты</a>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>TechFuture 2026</h4>
+                    <p>Образовательная конференция для IT-специалистов</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="speakers.html">Спикеры</a></li>
+                        <li><a href="schedule.html">Расписание</a></li>
+                        <li><a href="tickets.html">Билеты</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Контакты</h4>
+                    <p>Email: info@techfuture2026.com</p>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 TechFuture. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - TechFuture 2026</title>
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/root.css"> 
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__wrapper">
+                <div class="navbar__logo">
+                    <a href="index.html">TechFuture 2026</a>
+                </div>
+                <button class="navbar__toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="navbar__menu" id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="speakers.html">Спикеры</a></li>
+                    <li><a href="schedule.html">Расписание</a></li>
+                    <li><a href="tickets.html">Билеты</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="page__header">
+        <div class="container">
+            <h1>Свяжитесь с нами</h1>
+            <p>Мы готовы ответить на любые ваши вопросы</p>
+        </div>
+    </header>
+
+    <!-- Контактная информация и форма -->
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts__wrapper">
+                <!-- Контактная информация -->
+                <div class="contacts__info">
+                    <h2>Информация о конференции</h2>
+                    
+                    <div class="info__item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:info@techfuture2026.com">info@techfuture2026.com</a></p>
+                        <p class="info__note">Ответим в течение 24 часов</p>
+                    </div>
+
+                    <div class="info__item">
+                        <h3>☎️ Телефон</h3>
+                        <p><a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                        <p class="info__note">Пн-Пт: 10:00 - 19:00 (МСК)</p>
+                    </div>
+
+                    <div class="info__item">
+                        <h3>📍 Адрес</h3>
+                        <p>МЦК "Экспоцентр"<br>
+                           Краснопресненская наб., 14<br>
+                           Москва, 123100<br>
+                           Россия</p>
+                    </div>
+
+                    <div class="info__item">
+                        <h3>🎤 Для спикеров</h3>
+                        <p><a href="mailto:speakers@techfuture2026.com">speakers@techfuture2026.com</a></p>
+                        <p class="info__note">Отправьте предложение на доклад</p>
+                    </div>
+
+                    <div class="info__item">
+                        <h3>🤝 Партнерство</h3>
+                        <p><a href="mailto:partners@techfuture2026.com">partners@techfuture2026.com</a></p>
+                        <p class="info__note">Возможности для сотрудничества</p>
+                    </div>
+
+                    <!-- Социальные сети -->
+                    <div class="social__links">
+                        <h3>Следите за новостями</h3>
+                        <div class="social__buttons">
+                            <a href="#" class="social__btn">Telegram</a>
+                            <a href="#" class="social__btn">Instagram</a>
+                            <a href="#" class="social__btn">VK</a>
+                            <a href="#" class="social__btn">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма обратной связи -->
+                <div class="contacts__form">
+                    <h2>Форма обратной связи</h2>
+                    <form id="contactForm" onsubmit="submitForm(event)">
+                        <div class="form__group">
+                            <label for="name">Ваше имя:</label>
+                            <input type="text" id="name" name="name" required placeholder="Иван Петров">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="phone">Телефон (опционально):</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="topic">Тема вопроса:</label>
+                            <select id="topic" name="topic" required>
+                                <option value="">-- Выберите тему --</option>
+                                <option value="registration">Регистрация и билеты</option>
+                                <option value="program">Программа конференции</option>
+                                <option value="speaker">Предложение доклада</option>
+                                <option value="partnership">Партнерство</option>
+                                <option value="technical">Технические вопросы</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message">Сообщение:</label>
+                            <textarea id="message" name="message" required rows="5" 
+                                      placeholder="Расскажите о вашем вопросе..."></textarea>
+                        </div>
+
+                        <div class="form__group checkbox">
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            <label for="agreement">
+                                Я согласен с <a href="#" onclick="event.preventDefault(); alert('Политика конфиденциальности');">политикой конфиденциальности</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary">Отправить сообщение</button>
+                    </form>
+                    <div id="formMessage" class="form__message" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта локации -->
+    <section class="location">
+        <div class="container">
+            <h2>Место проведения</h2>
+            <div class="map__container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.9639408349997!2d37.542859!3d55.754817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a5a5a5a5d%3A0x5a5a5a5a5a5a5a5a!2s%D0%9C%D0%A6%D0%9A%20%22%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D1%86%D0%B5%D0%BD%D1%82%D1%80%22!5e0!3m2!1sru!2sru!4v1234567890123" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p class="map__note">Интерактивная карта показывает точное расположение конференции</p>
+        </div>
+    </section>
+
+    <!-- Часто задаваемые вопросы (краткая версия) -->
+    <section class="quick-faq">
+        <div class="container">
+            <h2>Быстрые ответы</h2>
+            <div class="quick-faq__grid">
+                <div class="faq-card">
+                    <h3>Как купить билет?</h3>
+                    <p>Перейдите на страницу "Билеты", выберите тариф и оплатите через удобный способ</p>
+                    <a href="tickets.html">Перейти</a>
+                </div>
+                <div class="faq-card">
+                    <h3>Вернуть билет?</h3>
+                    <p>Возврат возможен до 1 марта 2026 с вычетом 10% комиссии. Напишите нам</p>
+                    <a href="mailto:info@techfuture2026.com">Email</a>
+                </div>
+                <div class="faq-card">
+                    <h3>Стать спикером?</h3>
+                    <p>Отправьте предложение доклада на speakers@techfuture2026.com до 15 февраля</p>
+                    <a href="mailto:speakers@techfuture2026.com">Email</a>
+                </div>
+                <div class="faq-card">
+                    <h3>Полная FAQ</h3>
+                    <p>Ответы на все вопросы в разделе "FAQ" нашего сайта</p>
+                    <a href="faq.html">Перейти</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>TechFuture 2026</h4>
+                    <p>Образовательная конференция для IT-специалистов</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="speakers.html">Спикеры</a></li>
+                        <li><a href="schedule.html">Расписание</a></li>
+                        <li><a href="tickets.html">Билеты</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Контакты</h4>
+                    <p>Email: info@techfuture2026.com</p>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 TechFuture. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>
